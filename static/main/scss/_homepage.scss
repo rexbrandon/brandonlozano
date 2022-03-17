@@ -9,6 +9,9 @@
     width: 30px;
     z-index: 15;
     border-radius: 5px;
+    @media screen and(max-width: 280px){
+        right: 40px;
+    }
     &:hover img{
         background: $lightBlue;
     }
@@ -32,7 +35,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
     .close-menu-icon{
         position: absolute;
         top: 20px;
@@ -89,7 +92,7 @@
         left: 30px;
         display: flex;
         flex-direction: column;
-        @media screen and (max-width:900px){
+        @media screen and (max-width:950px){
             display: none;
         }
         .row-one{
@@ -131,8 +134,12 @@
             left: 10%;
             top: 25%;
         }
-        @media screen and (max-width: 900px) {
-            top: 5%;
+        @media screen and (max-width: 950px) {
+            left: 5%;
+            top: 2%;
+        }
+        @media screen and (max-width: 280px){
+            top: 0%;
         }
         img{
             width: 100%;
@@ -152,44 +159,65 @@
         @media screen and (max-width: 1100px) {
             width: 75%;
         }
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 950px) {
             clip-path: polygon(0 26%, 100% 0, 100% 100%, 0% 100%);
             width: 100%;
             bottom: 0;
             position: absolute;
-            height: 75%;
+            height: 67.5%;
             justify-content: center;
         }
         .text-area{
             width: 90%;
             max-width: 400px;
+            min-height: 350px;
             @include flexBoxCenterAndEven();
-            margin-right: 5%;
+            margin-right: 10%;
             flex-direction: column;
-            @media screen and (max-width: 900px) {
+            @media screen and (min-width: 1900px){
+                margin-right: 15%;
+            }
+            @media screen and (max-width: 950px) {
                 margin-right: 0;
+                @include centerObj();
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 margin-top: 30px;
             }
             @media screen and (max-width: 700px) {
-                margin-top: 50px;
+                margin-top: 25%;
             }
             .standout{
                 color: $darkBackground;
                 font-size: 40px;
+                width: 95%;
                 @media screen and (max-width: 700px) {
-                    font-size: 34px;
+                    font-size: 32px;
+                    width: 90%;
+                }
+                @media screen and (max-width: 350px) {
+                    font-size: 26px;
                 }
             }
             .subtext{
                 color: $secondaryBackground;
                 font-size: 34px;
+                width: 95%;
                 @media screen and (max-width: 700px) {
                     font-size: 26px;
+                    width: 90%;
+                }
+                @media screen and (max-width: 350px) {
+                    font-size: 20px;
                 }
             }
             .ctaLink{
                 text-decoration: none;
-                width: 100%;
+                width: 95%;
+                @include centerObj();
+                @include centerVertHor();
                 &:hover p{
                     background: $mutedBlue;
                 }
@@ -205,27 +233,11 @@
                     transition: all 1s ease-in-out;
                 }
             }
-            .loading-area{
-                margin-top: 20px;
-                width: 100%;
-                .scripted-text{
-                    font-family: 'Shadows Into Light', cursive;
-                    color: $secondaryBackground;
-                }
-                .loading-bar{
-                    width: 90%;
-                    height: 25px;
-
-                    background-image: url('/static/main/img/assets/loadingbackground.svg');
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: left center;
-                }
-            }
             .alt-links{
                 width: 90%;
-                padding-top: 30px;
+                padding-top: 20px;
                 @include flexBoxCenterAndEven();
+                justify-content: space-evenly;
                 a{
                     .img-area{
                         height: 50px;
