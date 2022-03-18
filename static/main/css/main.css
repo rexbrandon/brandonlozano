@@ -834,6 +834,49 @@
   object-fit: cover;
 }
 
+.form-success-container {
+  background: #10131a;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-success-container .content-container {
+  width: 95%;
+  max-width: 500px;
+  padding: 25px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.form-success-container .content-container .callout {
+  color: #515f80;
+  font-size: 30px;
+  text-align: center;
+  width: 80%;
+  padding: 10px 0px;
+}
+.form-success-container .content-container .name {
+  color: #2a3142;
+  font-size: 24px;
+  padding: 10px 0px;
+}
+.form-success-container .content-container a {
+  text-decoration: none;
+  padding-top: 20px;
+  font-size: 20px;
+  font-family: "Shadows Into Light", cursive;
+  color: #f7faff;
+  transition: all 1s ease-in-out;
+}
+.form-success-container .content-container a:hover {
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
