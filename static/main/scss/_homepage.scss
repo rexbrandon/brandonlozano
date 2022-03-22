@@ -169,7 +169,7 @@
         }
         .text-area{
             width: 90%;
-            max-width: 400px;
+            max-width: 425px;
             min-height: 350px;
             @include flexBoxCenterAndEven();
             margin-right: 10%;
@@ -200,8 +200,8 @@
                 @media screen and (max-width: 420px){
                     width: 85%;
                 }
-                @media screen and (max-width: 350px) {
-                    font-size: 26px;
+                @media screen and (max-width: 375px) {
+                    font-size: 28px;
                 }
             }
             .subtext{
@@ -215,14 +215,13 @@
                 @media screen and (max-width: 420px){
                     width: 85%;
                 }
-                @media screen and (max-width: 350px) {
-                    font-size: 20px;
+                @media screen and (max-width: 375px) {
+                    font-size: 22px;
                 }
             }
             .ctaLink{
                 text-decoration: none;
-                width: 95%;
-                @include centerObj();
+                width: 100%;
                 @include centerVertHor();
                 &:hover p{
                     background: $mutedBlue;
