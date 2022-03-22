@@ -226,6 +226,11 @@
     width: 90%;
   }
 }
+@media screen and (max-width: 420px) {
+  .home-header .info-side .text-area .standout {
+    width: 85%;
+  }
+}
 @media screen and (max-width: 350px) {
   .home-header .info-side .text-area .standout {
     font-size: 26px;
@@ -240,6 +245,11 @@
   .home-header .info-side .text-area .subtext {
     font-size: 26px;
     width: 90%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .home-header .info-side .text-area .subtext {
+    width: 85%;
   }
 }
 @media screen and (max-width: 350px) {
