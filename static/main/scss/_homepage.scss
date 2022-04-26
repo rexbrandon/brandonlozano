@@ -26,7 +26,6 @@
     overflow: hidden;
     top: 0px;
     right: 0px;
-    width: 0%;
     height: 100vh;
     max-width: 500px;
     z-index: 30;
@@ -35,7 +34,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    transition: all .5s ease-in-out;
+    transition: all .35s ease-in-out;
     .close-menu-icon{
         position: absolute;
         top: 20px;
@@ -80,6 +79,12 @@
             object-fit: cover;
         }
     }
+}
+.menu-open{
+    width: 100%;
+}
+.menu-closed{
+    width: 0%;
 }
 .home-header{
     height: 100vh;
@@ -300,8 +305,6 @@
                         background: none;
                         padding: 10px 15px;
                         font-size: 18px;
-                        color: $offWhite;
-                        border: 2px solid $offWhite;
                         border-radius: 5px;
                         margin: 0px 20px 0px;
                         transition: 1s all ease-in-out;
@@ -310,9 +313,13 @@
                             border: 2px solid $brightBlue;
                         }
                     }
-                    .aboutBtn:focus {
+                    .active-about-btn {
                         color: $brightBlue;
                         border: 2px solid $brightBlue;
+                    }
+                    .inactive-about-btn {
+                        color: $offWhite;
+                        border: 2px solid $offWhite;
                     }
                 }
                 .box{

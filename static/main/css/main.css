@@ -25,7 +25,6 @@
   overflow: hidden;
   top: 0px;
   right: 0px;
-  width: 0%;
   height: 100vh;
   max-width: 500px;
   z-index: 30;
@@ -34,7 +33,7 @@
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 #menu-background .close-menu-icon {
   position: absolute;
@@ -79,6 +78,14 @@
 #menu-background .menu-logo img {
   width: 100%;
   object-fit: cover;
+}
+
+.menu-open {
+  width: 100%;
+}
+
+.menu-closed {
+  width: 0%;
 }
 
 .home-header {
@@ -356,8 +363,6 @@
   background: none;
   padding: 10px 15px;
   font-size: 18px;
-  color: #f7faff;
-  border: 2px solid #f7faff;
   border-radius: 5px;
   margin: 0px 20px 0px;
   transition: 1s all ease-in-out;
@@ -366,9 +371,13 @@
   color: #4e6bb0;
   border: 2px solid #4e6bb0;
 }
-.home-about .content-container .flex-inline .text-area .content-options .aboutBtn:focus {
+.home-about .content-container .flex-inline .text-area .content-options .active-about-btn {
   color: #4e6bb0;
   border: 2px solid #4e6bb0;
+}
+.home-about .content-container .flex-inline .text-area .content-options .inactive-about-btn {
+  color: #f7faff;
+  border: 2px solid #f7faff;
 }
 .home-about .content-container .flex-inline .text-area .box {
   padding: 10px 0px;

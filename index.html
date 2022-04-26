@@ -20,6 +20,15 @@
     <meta property="og:url" content="https://brandonlozano.com/"/>
     <meta property="og:title" content="Brandon Lozano Front End Web Developer" />
     <meta property="og:description" content="Brandon is a front end developer with two years of experience - who is seeking a full time developer position"/>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZNFG1ZTZH"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VZNFG1ZTZH');
+    </script>
     <title>Brandon Lozano Front End Web Developer</title>
 </head>
 <body>
@@ -27,11 +36,14 @@
     <nav class="main-nav">
         <img src="/static/main/img/icons/bblue-menu.svg" alt="" onclick="mobileMenu('open')">
     </nav>
-    <div id="menu-background">
+    <div id="menu-background" class="menu-closed">
         <div class="close-menu-icon">
             <img src="/static/main/img/icons/white-menu.svg" alt="" onclick="mobileMenu('close')">
         </div>
         <ul class="menu-elements">
+            <a href="#home-header">
+                <li class="item">Home</li>
+            </a>
             <a href="#home-about">
                 <li class="item">About</li>
             </a>
@@ -42,8 +54,8 @@
                 <li class="item">Contact</li>
             </a>
             <div class="spacer"></div>
-            <a href="tel:2106874371">
-                <li class="item alt">(210)-687-4371</li>
+            <a href="tel:8662563387">
+                <li class="item alt">866-BLO-DEVS</li>
             </a>
             <a href="mailto:email@brandonlozano.com">
                 <li class="item alt">email@brandonlozano.com</li>
@@ -54,7 +66,7 @@
         </div>
     </div>
     <!--HEADER/LANDING PAGE-->
-    <section class="home-header">
+    <section id="home-header" class="home-header">
         <!--TOP CORNER CURSIVE LOGO AND BORDER LINES-->
         <div class="logo-area">
             <div class="row-one">
@@ -112,8 +124,8 @@
             <div class="flex-inline">
                 <div class="text-area">
                     <div class="content-options">
-                        <button class="aboutBtn" onclick="changeAboutTxtLength('short')">Short Bio</button>
-                        <button class="aboutBtn" onclick="changeAboutTxtLength('long')">Longer Bio</button>
+                        <button id="short-about-btn" class="aboutBtn active-about-btn">Short Bio</button>
+                        <button id="long-about-btn" class="aboutBtn inactive-about-btn">Longer Bio</button>
                     </div>
                     <div class="box">
                         <p class="text-subtitle">&lt;professional&gt;</p>
@@ -340,8 +352,8 @@
                 <div class="alt-contact">
                     <h2 class="header">Other Methods</h2>
                     <div class="text">
-                        <a href="tel:2106874371">
-                            <h4 class="contact-info">(210)-687-4371</h4>
+                        <a href="tel:8662563387">
+                            <h4 class="contact-info">866-BLO-DEVS</h4>
                         </a>
                         <a href="mailto:email@brandonlozano.com">
                             <h4 class="contact-info">email@brandonlozano.com</h4>
@@ -376,6 +388,7 @@
         </div>
     </section>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/static/main/js/aboutPageToggle.js"></script>
     <script src="/static/main/js/anchorScroll.js"></script>
     <script src="/static/main/js/mobileMenu.js"></script>
